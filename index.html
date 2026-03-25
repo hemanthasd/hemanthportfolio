@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hemanth | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div class="splash-screen" id="splashScreen">
+    <div class="splash-content">
+      <div class="splash-logo">
+        <span class="splash-bracket">&lt;</span>HK<span class="splash-bracket">/&gt;</span>
+      </div>
+      <div class="splash-name">HEMANTH</div>
+      <div class="splash-tagline">Full Stack Developer &middot; Java &middot; DSA Enthusiast</div>
+      <div class="splash-bar-outer"><div class="splash-bar-inner" id="splashBar"></div></div>
+      <div class="splash-pct" id="splashPct">0%</div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor (tail-drop style) -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <canvas class="cursor-trail-canvas" id="cursorTrail"></canvas>
+
+  <!-- Crystal Star Background Canvas -->
+  <canvas id="starCanvas"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>HK<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-photo-wrapper">
+        <div class="spider-ring ring1"></div>
+        <div class="spider-ring ring2"></div>
+        <div class="photo-placeholder">
+          <div class="photo-inner">
+            <!-- PLACEHOLDER: Replace src with your actual photo path e.g. assets/photo.jpg -->
+            <div class="photo-ph-box">
+              <img src="assets/photo.jpeg" alt="Hemanth Kumar Reddy" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
+              <i class="fas fa-user-circle"></i>
+              <span>Your Photo Here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">HEMANTH<br><span class="name-accent">KUMAR REDDY</span></h1>
+        <div class="hero-role">
+          <span class="role-tag">&#60;</span>
+          <span class="typed-text" id="typed"></span>
+          <span class="role-tag">&#47;&#62;</span>
+        </div>
+        <p class="hero-bio">Full Stack Developer | Java &amp; DSA | Tech Innovator</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#resume" class="btn btn-secondary">Resume</a>
+        </div>
+        <div class="hero-social">
+          <a href="https://linkedin.com/in/hemanthreddy15" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/hemanthasd" target="_blank" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+          <a href="mailto:mhemanthkumarreddy0@gmail.com" class="social-link"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="section-header">
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+      <div class="web-divider"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-card glass-card">
+        <h3>Who Am I?</h3>
+        <p>I'm a passionate Full Stack Developer and tech enthusiast currently pursuing B.Tech in Computer Science &amp; Engineering at Lovely Professional University. I specialize in building web applications using PHP, JavaScript, React.js and Node.js, and love implementing robust Java-based solutions.</p>
+        <p>With a strong foundation in Data Structures &amp; Algorithms, I focus on writing efficient, clean code and creating solutions that make a real impact. Always eager to learn new technologies and contribute to meaningful projects.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num accent">2+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num accent">5+</div>
+          <div class="stat-label">Languages</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num accent">4+</div>
+          <div class="stat-label">Frameworks</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num accent">2+</div>
+          <div class="stat-label">Years Learning</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section — Full Stack focused per CV -->
+  <section class="section skills" id="skills">
+    <div class="section-header">
+      <h2 class="section-title">My <span class="accent">Skills</span></h2>
+      <div class="web-divider"></div>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-category glass-card">
+        <div class="skill-icon"><i class="fas fa-code"></i></div>
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span class="tag"><i class="fab fa-js-square"></i> JavaScript</span>
+          <span class="tag"><i class="fab fa-python"></i> Python</span>
+          <span class="tag"><i class="fab fa-java"></i> Java</span>
+          <span class="tag"><i class="fas fa-copyright"></i> C++</span>
+          <span class="tag"><i class="fas fa-hashtag"></i> PHP</span>
+        </div>
+      </div>
+
+      <div class="skill-category glass-card">
+        <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Frontend</h3>
+        <div class="skill-tags">
+          <span class="tag"><i class="fab fa-react"></i> React.js</span>
+          <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+          <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+          <span class="tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+        </div>
+      </div>
+
+      <div class="skill-category glass-card">
+        <div class="skill-icon"><i class="fas fa-server"></i></div>
+        <h3>Backend</h3>
+        <div class="skill-tags">
+          <span class="tag"><i class="fab fa-node-js"></i> Node.js</span>
+          <span class="tag"><i class="fas fa-bolt"></i> Express.js</span>
+          <span class="tag"><i class="fas fa-hashtag"></i> PHP</span>
+          <span class="tag"><i class="fas fa-key"></i> JWT Auth</span>
+          <span class="tag"><i class="fas fa-exchange-alt"></i> REST APIs</span>
+        </div>
+      </div>
+
+      <div class="skill-category glass-card">
+        <div class="skill-icon"><i class="fas fa-database"></i></div>
+        <h3>Databases</h3>
+        <div class="skill-tags">
+          <span class="tag"><i class="fas fa-leaf"></i> MongoDB</span>
+          <span class="tag"><i class="fas fa-database"></i> MySQL</span>
+          <span class="tag"><i class="fas fa-plug"></i> Mongoose</span>
+          <span class="tag"><i class="fas fa-network-wired"></i> Axios</span>
+        </div>
+      </div>
+
+      <div class="skill-category glass-card">
+        <div class="skill-icon"><i class="fas fa-sitemap"></i></div>
+        <h3>DSA &amp; Problem Solving</h3>
+        <div class="skill-tags">
+          <span class="tag"><i class="fab fa-java"></i> DSA with Java</span>
+          <span class="tag"><i class="fas fa-sort-amount-up"></i> Sorting Algorithms</span>
+          <span class="tag"><i class="fas fa-search"></i> Searching</span>
+          <span class="tag"><i class="fas fa-project-diagram"></i> Graph Algorithms</span>
+          <span class="tag"><i class="fas fa-brain"></i> Dynamic Programming</span>
+          <span class="tag"><i class="fas fa-table"></i> Data Structures</span>
+        </div>
+      </div>
+
+      <div class="skill-category glass-card">
+        <div class="skill-icon"><i class="fas fa-tools"></i></div>
+        <h3>Tools &amp; Platforms</h3>
+        <div class="skill-tags">
+          <span class="tag"><i class="fab fa-git-alt"></i> Git &amp; GitHub</span>
+          <span class="tag"><i class="fas fa-paper-plane"></i> Postman</span>
+          <span class="tag"><i class="fas fa-terminal"></i> VS Code</span>
+          <span class="tag"><i class="fas fa-route"></i> React Router</span>
+        </div>
+      </div>
+
+      <div class="skill-category glass-card">
+        <div class="skill-icon"><i class="fas fa-handshake"></i></div>
+        <h3>Soft Skills</h3>
+        <div class="skill-tags">
+          <span class="tag"><i class="fas fa-puzzle-piece"></i> Problem-Solving</span>
+          <span class="tag"><i class="fas fa-users"></i> Team Collaboration</span>
+          <span class="tag"><i class="fas fa-bug"></i> Debugging</span>
+          <span class="tag"><i class="fas fa-sync"></i> Adaptability</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="skill-bars">
+      <div class="bar-item">
+        <div class="bar-label"><span><i class="fab fa-js-square"></i> JavaScript</span><span>80%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-w="80"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-label"><span><i class="fab fa-react"></i> React.js</span><span>75%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-w="75"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-label"><span><i class="fab fa-node-js"></i> Node.js / Express</span><span>72%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-w="72"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-label"><span><i class="fab fa-java"></i> Java &amp; DSA</span><span>78%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-w="78"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-label"><span><i class="fas fa-database"></i> MongoDB / MySQL</span><span>70%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-w="70"></div></div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-label"><span><i class="fas fa-hashtag"></i> PHP</span><span>68%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-w="68"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section — Updated per CV -->
+  <section class="section projects" id="projects">
+    <div class="section-header">
+      <h2 class="section-title">My <span class="accent">Projects</span></h2>
+      <div class="web-divider"></div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card glass-card">
+        <div class="project-number">01</div>
+        <div class="project-badge">PHP &middot; MySQL &middot; Full Stack</div>
+        <h3>Cost-Effective Parking Solution</h3>
+        <p>A full-stack booking and payment web platform that streamlines parking management with secure user authentication and interactive UI components.</p>
+        <ul class="project-points">
+          <li>Built user authentication modules (signup, login, form processing)</li>
+          <li>Designed product/price display pages with interactive UI</li>
+          <li>Integrated media elements (images, videos, QR code) for usability</li>
+          <li>Executed secure form validation and backend logic</li>
+        </ul>
+        <div class="project-tech">
+          <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/hemanthasd/Cost-Effective-Parking-Solutions" target="_blank" class="btn btn-sm"><i class="fab fa-github"></i> GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card glass-card">
+        <div class="project-number">02</div>
+        <div class="project-badge">typescript &middot; Node.js &middot; sumarize</div>
+        <h3>Summarize pdf</h3>
+        <p>A TypeScript and Node.js application to summarize PDF documents with a clean and intuitive user interface.</p>
+        <ul class="project-points">
+          <li>PDF parsing and text extraction</li>
+          <li>Text summarization using natural language processing techniques</li>
+          <li>Interactive UI development with TypeScript</li>
+          <li>Backend API development with Node.js</li>
+        </ul>
+        <div class="project-tech">
+          <span>TypeScript</span><span>Node.js</span><span>PDF Parsing</span><span>NLP</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/hemanthasd/summarizepdf" target="_blank" class="btn btn-sm"><i class="fab fa-github"></i> GitHub ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Training Section — Cipher Schools DSA with Java -->
+  <section class="section training" id="training">
+    <div class="section-header">
+      <h2 class="section-title">My <span class="accent">Training</span></h2>
+      <div class="web-divider"></div>
+    </div>
+    <div class="training-grid">
+
+      <div class="training-card glass-card">
+        <div class="training-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+        <div class="training-body">
+          <div class="training-badge">Java &middot; DSA &middot; Algorithms</div>
+          <h3>Data Structures &amp; Algorithms with Java</h3>
+          <h4><i class="fas fa-building"></i> Cipher Schools (Edtech Company)</h4>
+          <span class="training-date"><i class="fas fa-calendar-alt"></i> Jun 2025 – Jul 2025</span>
+          <p>Mastered fundamental and advanced Data Structures (arrays, linked lists, stacks, queues, hash tables, trees, heaps, graphs) with Big O notation analysis. Implemented Sorting (Quick Sort, Merge Sort, Heap Sort), Searching (Binary Search, BFS, DFS), Graph Algorithms (Dijkstra's, Bellman-Ford), and Dynamic Programming — applied to real-world scenarios like network routing and database indexing. Achieved significant optimizations shifting from O(n²) to O(n log n) / O(n) using Hash Maps for constant-time lookups.</p>
+          <div class="training-tech">
+            <span>Java</span><span>Data Structures</span><span>Algorithms</span><span>Dynamic Programming</span><span>Graph Theory</span><span>Big O Notation</span>
+          </div>
+          <!-- PLACEHOLDER: Replace 'assets/cipher_schools_dsa.pdf' with your actual certificate file -->
+          <button class="btn btn-sm view-cert-btn" onclick="openCertModalFile('assets/cipher_schools_dsa.pdf','DSA with Java — Cipher Schools','Cipher Schools · Jul 2025')">
+            <i class="fas fa-certificate"></i> View Certificate
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section class="section certificates" id="certificates">
+    <div class="section-header">
+      <h2 class="section-title">My <span class="accent">Certificates</span></h2>
+      <div class="web-divider"></div>
+    </div>
+    <div class="certs-grid">
+
+      
+
+      <!-- Certificate 1: Introduction to Hardware & OS (from CV) -->
+      <div class="cert-card glass-card" onclick="openCertModalFile('assets/intro_hardware_os.pdf','Introduction to Hardware and Operating Systems','Coursera · Sep 2024')">
+        <div class="cert-ribbon">Sep 2024</div>
+        <div class="cert-preview-wrap">
+          <!-- PLACEHOLDER: Add your certificate PDF at assets/intro_hardware_os.pdf -->
+          <div class="cert-placeholder-block">
+            <i class="fas fa-microchip"></i>
+            <p>Coursera</p>
+            <small>Hardware &amp; OS</small>
+          </div>
+          <div class="cert-overlay-click"><i class="fas fa-expand"></i> View</div>
+        </div>
+        <div class="cert-info">
+          <h4><i class="fas fa-microchip"></i> Intro to Hardware &amp; Operating Systems</h4>
+          <p>Coursera</p>
+          <span class="cert-date">September 2024</span>
+        </div>
+      </div>
+
+      <!-- Certificate 2: Legacy Responsive Web Design (from CV) -->
+      <div class="cert-card glass-card" onclick="openCertModalFile('assets/freecodecamp_rwd.pdf','Legacy Responsive Web Design V8','FreeCodeCamp · Nov 2023')">
+        <div class="cert-ribbon">Nov 2023</div>
+        <div class="cert-preview-wrap">
+          <!-- PLACEHOLDER: Add your certificate PDF at assets/freecodecamp_rwd.pdf -->
+          <div class="cert-placeholder-block">
+            <i class="fas fa-mobile-alt"></i>
+            <p>FreeCodeCamp</p>
+            <small>Responsive Web Design</small>
+          </div>
+          <div class="cert-overlay-click"><i class="fas fa-expand"></i> View</div>
+        </div>
+        <div class="cert-info">
+          <h4><i class="fas fa-mobile-alt"></i> Legacy Responsive Web Design V8</h4>
+          <p>FreeCodeCamp</p>
+          <span class="cert-date">November 2023</span>
+        </div>
+      </div>
+
+      <!-- Certificate 3: Placeholder for future certificate -->
+      <div class="cert-card glass-card cert-add-ph" onclick="alert('Add your next certificate here!')">
+        <div class="cert-preview-wrap">
+          <div class="cert-placeholder-block cert-add-block">
+            <i class="fas fa-plus-circle"></i>
+            <p>Add Certificate</p>
+            <small>Replace this placeholder</small>
+          </div>
+        </div>
+        <div class="cert-info">
+          <h4><i class="fas fa-plus"></i> Your Next Certificate</h4>
+          <p>Organization Name</p>
+          <span class="cert-date">Month Year</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Certificate Modal -->
+    <div class="cert-modal" id="certModal">
+      <div class="cert-modal-overlay" onclick="closeCertModal()"></div>
+      <div class="cert-modal-content glass-card">
+        <button class="modal-close" onclick="closeCertModal()">&#x2715;</button>
+        <div class="modal-header">
+          <h3 id="modalCertName">Certificate</h3>
+          <p id="modalCertOrg"></p>
+        </div>
+        <div class="modal-cert-preview">
+          <iframe id="modalCertIframe" src="" class="modal-cert-iframe"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section class="section resume-section" id="resume">
+    <div class="section-header">
+      <h2 class="section-title">My <span class="accent">Resume</span></h2>
+      <div class="web-divider"></div>
+    </div>
+    <div class="resume-wrapper">
+      <div class="resume-actions">
+        <button class="btn btn-primary" onclick="toggleResumePreview()">
+          <i class="fas fa-eye"></i> <span id="previewBtnText">Preview Resume</span>
+        </button>
+        <!-- PLACEHOLDER: Replace href with your actual CV file path e.g. assets/Hemanth_CV.pdf -->
+        <a href="assets/Hemanth_CV.pdf" download class="btn btn-secondary"><i class="fas fa-download"></i> Download CV</a>
+      </div>
+      <div class="resume-preview-panel" id="resumePreview">
+        <div class="resume-frame glass-card">
+          <div class="resume-toolbar">
+            <span><i class="fas fa-file-pdf"></i> Hemanth_CV.pdf</span>
+            <div class="toolbar-btns">
+              <button onclick="zoomIn()"><i class="fas fa-search-plus"></i></button>
+              <button onclick="zoomOut()"><i class="fas fa-search-minus"></i></button>
+              <button onclick="closePrev()">&#x2715;</button>
+            </div>
+          </div>
+          <div class="resume-embed-wrapper" id="resumeEmbedWrapper">
+            <!-- PLACEHOLDER: Replace src with your actual CV file path e.g. assets/Hemanth_CV.pdf -->
+            <div class="resume-ph-block">
+              <i class="fas fa-file-pdf"></i>
+              <p>Resume Preview</p>
+              <small>Replace <code>assets/Hemanth_CV.pdf</code> with your actual CV file in the <code>assets/</code> folder</small>
+            </div>
+            <iframe src="assets/Hemanth_CV.pdf#toolbar=0" id="resumeIframe" class="resume-iframe" title="Hemanth Resume"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section education" id="education">
+    <div class="section-header">
+      <h2 class="section-title">My <span class="accent">Education</span></h2>
+      <div class="web-divider"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="timeline-year">Aug 2023 – Present</div>
+          <h3><i class="fas fa-university"></i> B.Tech — Computer Science &amp; Engineering</h3>
+          <h4>Lovely Professional University, Phagwara, Punjab</h4>
+          <p class="cgpa">CGPA: <span class="accent">6.10</span></p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="timeline-year">Jun 2021 – Mar 2023</div>
+          <h3><i class="fas fa-school"></i> Intermediate (12th)</h3>
+          <h4>Sri Chaitanya Junior College, Vijayawada, Andhra Pradesh</h4>
+          <p class="cgpa">Percentage: <span class="accent">79%</span></p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="timeline-year">Jun 2020 – Mar 2021</div>
+          <h3><i class="fas fa-book"></i> Matriculation (10th)</h3>
+          <h4>Sri Sai Vidyanikethan High School, Badvel, Andhra Pradesh</h4>
+          <p class="cgpa">Percentage: <span class="accent">100%</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="section-header">
+      <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+      <div class="web-divider"></div>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-info-col">
+        <div class="contact-card glass-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <h4>Email</h4>
+          <a href="mailto:mhemanthkumarreddy0@gmail.com">mhemanthkumarreddy0@gmail.com</a>
+        </div>
+        <div class="contact-card glass-card">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <h4>Mobile</h4>
+          <a href="tel:+917569183917">+91-7569183917</a>
+        </div>
+        <div class="contact-card glass-card">
+          <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+          <h4>LinkedIn</h4>
+          <a href="https://linkedin.com/in/hemanthreddy15" target="_blank">linkedin.com/in/hemanthreddy15</a>
+        </div>
+        <div class="contact-card glass-card">
+          <div class="contact-icon"><i class="fab fa-github"></i></div>
+          <h4>GitHub</h4>
+          <a href="https://github.com/hemanthasd" target="_blank">github.com/mhemanthkumarreddy27</a>
+        </div>
+      </div>
+
+      <div class="contact-form-col glass-card">
+        <h3><i class="fas fa-paper-plane"></i> Send a Message</h3>
+        <p class="form-subtitle">Fill this form — it will open Gmail with your message pre-filled.</p>
+        <div class="contact-form">
+          <div class="form-group">
+            <label for="senderName"><i class="fas fa-user"></i> Your Name</label>
+            <input type="text" id="senderName" placeholder="John Doe" />
+          </div>
+          <div class="form-group">
+            <label for="senderEmail"><i class="fas fa-envelope"></i> Your Email</label>
+            <input type="email" id="senderEmail" placeholder="john@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="msgSubject"><i class="fas fa-tag"></i> Subject</label>
+            <input type="text" id="msgSubject" placeholder="Project Collaboration / Internship..." />
+          </div>
+          <div class="form-group">
+            <label for="msgBody"><i class="fas fa-comment-dots"></i> Message</label>
+            <textarea id="msgBody" rows="5" placeholder="Hello Hemanth, I'd like to discuss..."></textarea>
+          </div>
+          <button class="btn btn-primary send-btn" onclick="sendViaGmail()">
+            <i class="fab fa-google"></i> Send via Gmail
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Made with <span class="accent">&#10084;&#65039;</span> by <span class="accent">Hemanth Kumar Reddy</span> &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

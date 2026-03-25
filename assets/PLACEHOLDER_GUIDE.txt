@@ -1,0 +1,29 @@
+PORTFOLIO ASSET PLACEHOLDERS — HEMANTH KUMAR REDDY
+====================================================
+
+Replace the following placeholder files in this assets/ folder:
+
+1. PHOTO
+   File: photo.jpg (or photo.jpeg / photo.png)
+   Usage: Add your profile photo. Update the HTML in index.html (hero section) to:
+     <img src="assets/photo.jpg" alt="Hemanth Kumar Reddy" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
+   (Replace the photo-ph-box div with the img tag above)
+
+2. RESUME / CV
+   File: Hemanth_CV.pdf
+   Usage: Your resume PDF. Used in the Resume section for preview and download.
+
+3. TRAINING CERTIFICATE — Cipher Schools DSA
+   File: cipher_schools_dsa.pdf
+   Usage: Training certificate from Cipher Schools (Jun–Jul 2025). 
+          Shown in both Training section (View Certificate button) and Certificates section.
+
+4. CERTIFICATES
+   File: intro_hardware_os.pdf       → Introduction to Hardware & OS (Coursera, Sep 2024)
+   File: freecodecamp_rwd.pdf        → Legacy Responsive Web Design V8 (FreeCodeCamp, Nov 2023)
+
+HOW TO USE:
+- Place all PDF/image files in this assets/ folder alongside index.html
+- The portfolio will automatically load them in the certificate modal and resume preview
+- The cert-placeholder blocks will be replaced by actual PDFs once you add the files
+
