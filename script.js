@@ -274,20 +274,54 @@ function toggleResumePreview() {
   const btn = document.getElementById('previewBtnText');
   const open = panel.classList.toggle('open');
   btn.textContent = open ? 'Close Preview' : 'Preview Resume';
+  if (open) {
+    // Reset zoom when opening
+    resumeZoom = 1;
+    updateBaseHeight();
+    const iframe = document.getElementById('resumeIframe');
+    const wrapper = document.getElementById('resumeEmbedWrapper');
+    iframe.style.transform = 'scale(1)';
+    wrapper.style.height = `${baseHeight}px`;
+  }
 }
 let resumeZoom = 1;
+let baseHeight = 800; // Default base height
+
+function updateBaseHeight() {
+  // Update base height based on screen size
+  baseHeight = window.innerWidth <= 600 ? 500 : 800;
+}
+
 function zoomIn() {
+  updateBaseHeight();
   resumeZoom = Math.min(resumeZoom + 0.15, 2);
-  document.getElementById('resumeIframe').style.transform = `scale(${resumeZoom})`;
-  document.getElementById('resumeIframe').style.transformOrigin = 'top left';
+  const iframe = document.getElementById('resumeIframe');
+  const wrapper = document.getElementById('resumeEmbedWrapper');
+  iframe.style.transform = `scale(${resumeZoom})`;
+  iframe.style.transformOrigin = 'top left';
+  // Adjust wrapper height to accommodate scaled content
+  wrapper.style.height = `${baseHeight * resumeZoom}px`;
 }
 function zoomOut() {
+  updateBaseHeight();
   resumeZoom = Math.max(resumeZoom - 0.15, 0.5);
-  document.getElementById('resumeIframe').style.transform = `scale(${resumeZoom})`;
+  const iframe = document.getElementById('resumeIframe');
+  const wrapper = document.getElementById('resumeEmbedWrapper');
+  iframe.style.transform = `scale(${resumeZoom})`;
+  iframe.style.transformOrigin = 'top left';
+  // Adjust wrapper height to accommodate scaled content
+  wrapper.style.height = `${baseHeight * resumeZoom}px`;
 }
 function closePrev() {
   document.getElementById('resumePreview').classList.remove('open');
   document.getElementById('previewBtnText').textContent = 'Preview Resume';
+  // Reset zoom
+  resumeZoom = 1;
+  updateBaseHeight();
+  const iframe = document.getElementById('resumeIframe');
+  const wrapper = document.getElementById('resumeEmbedWrapper');
+  iframe.style.transform = 'scale(1)';
+  wrapper.style.height = `${baseHeight}px`;
 }
 
 /* ======== SEND VIA GMAIL ======== */
